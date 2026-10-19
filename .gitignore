@@ -1,0 +1,22 @@
+# Build output
+deploy-build/
+cafe.war
+*.class
+# Eclipse / IDE
+.metadata/
+CafeManagementOnline/.metadata/
+CafeManagementOnline/Servers/
+*/.settings/
+*/build/
+*.launch
+# Tomcat (re-download, see README)
+apache-tomcat-*/
+tomcat9.zip
+dl_done.txt
+# OS
+Thumbs.db
+Desktop.ini
+# Test leftovers
+jar*.txt
+*.html
+sources.txt
