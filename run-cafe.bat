@@ -13,4 +13,4 @@ javac -encoding UTF-8 -nowarn -cp "%CATALINA_HOME%\lib\servlet-api.jar" -d "%TAR
 del "%ROOT%sources.txt"
 if errorlevel 1 (echo Compile failed & pause & exit /b 1)
 
-java --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED -Dcatalina.home="%CATALINA_HOME%" -Dcatalina.base="%CATALINA_HOME%" -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -cp "%CATALINA_HOME%\bin\bootstrap.jar;%CATALINA_HOME%\bin\tomcat-juli.jar" org.apache.catalina.startup.Bootstrap start
+java --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED -Dcatalina.home="%CATALINA_HOME%" -Dcatalina.base="%CATALINA_HOME%" -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -cp "%CATALINA_HOME%\bin\bootstrap.jar;%CATALINA_HOME%\bin\tomcat-juli.jar" org.apache.catalina.startup.Bootstrap start
